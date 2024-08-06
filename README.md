@@ -9,11 +9,11 @@ The intention behind creating this dashboard is to display only the necessary in
 In an ideal Smart Home, dashboards wouldn't be needed. However, there are times when you still need to pick up your phone to adjust a few things. So, let's make a cool dashboard!
 
 
-🚧 This is a work in progress, I will update this repository regularly as my dashboard changes 🚧
+🚧 This is a work in progress, I will update this repository regularly as the dashboard changes 🚧
 
 ## Disclaimer
 
-This dashboard's code is provided as-is. It is up to you to modify the entity names (sensors and devices) to make it work.
+This dashboard's code is provided as-is. It is up to you to modify the entities' names (sensors and devices) to make it work.
 
 ## Requirements
 - [HACS] (not forcefully needed but it's gonna help you install most of the following requirements automatically)
