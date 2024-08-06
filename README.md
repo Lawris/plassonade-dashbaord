@@ -15,9 +15,6 @@ In an ideal Smart Home, dashboards wouldn't be needed. However, there are times 
 
 This dashboard's code is provided as-is. It is up to you to modify the entity names (sensors and devices) to make it work.
 
-
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
 ## Requirements
 - [HACS] (not forcefully needed but it's gonna help you install most of the following requirements automatically)
 - [Mushroom cards]
@@ -33,6 +30,8 @@ This dashboard's code is provided as-is. It is up to you to modify the entity na
 
 
 ## Climate control and Weather card
+
+![Climate control and Weather card](climate_card/climate_card.png)
 
 The goal was to concatenate a few things into a single card:
 - Air conditioning control and status (on/off/heat/cold/dry/temperature);
