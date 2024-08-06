@@ -59,12 +59,15 @@ Work in progress...
 Work in progress...
 
 
+## Shades, Roller shutters control
+
+Work in progress...
+
+
+
+
 ## Need help?
 Contact me on Instagram [@plassonade], or by email: plassonade@gmail.com.
 
 [@plassonade]: <https://instagram.com/plassonade>
 [plassonade@gmail.com]: <mailto:plassonade@gmail.com>
-
-## Shades, Roller shutters control
-
-Work in progress...
