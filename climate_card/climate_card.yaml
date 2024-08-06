@@ -1,0 +1,324 @@
+type: custom:stack-in-card
+keep:
+  margin: false
+  box_shadow: false
+  background: false
+style: |
+  ha-card-border-width: 0
+  ha-card {
+    border: none
+  }
+cards:
+  - type: grid
+    square: false
+    columns: 2
+    cards:
+      - type: custom:mushroom-template-card
+        style: |
+          ha-card {
+            padding-bottom: 1px !important;
+            border: none
+          }
+        primary: Daikin
+        secondary: |
+          Currently: {{ state_attr('climate.daikinap83672', 'hvac_action') }}
+        icon: |-
+          {% set mode = states('climate.daikinap83672') %}
+          {% if mode == 'off' %}
+          mdi:power
+          {% elif mode == 'cool' %}
+          mdi:snowflake
+          {% elif mode == 'heat' %}
+          mdi:fire
+          {% elif mode == 'heat_cool' %}
+          mdi:autorenew
+          {% else %}
+          mdi:home-thermometer
+          {% endif %}
+        icon_color: |-
+          {% set status = state_attr('climate.daikinap83672','hvac_action') %}
+          {% if status == 'off' %}
+          grey
+          {% elif status == 'cooling' %}
+          blue
+          {% elif status == 'heating' %}
+          red
+          {% else %}
+          grey
+          {% endif %}
+        tap_action: none
+      - type: vertical-stack
+        cards:
+          - type: custom:simple-thermostat
+            style: |
+              ha-card {
+                --st-spacing: 0px;
+                border: none
+              }
+              #ha-card .current--value {
+              #  color: #ffffff;
+              #}
+              header {
+                margin-bottom: 12px !important;
+                padding-bottom: 0px !important;
+              }
+              ha-card .thermostat-trigger { 
+                color: #9e9e9e;
+              }
+            entity: climate.daikinap83672
+            header:
+              name: false
+              icon: false
+            decimals: '0'
+            fallback: 'Off'
+            hide:
+              temperature: true
+              state: true
+            layout:
+              mode:
+                names: false
+                icons: false
+                headings: false
+              step: row
+            step_size: '1'
+            control:
+              hvac:
+                'off': false
+                heat: false
+                cool: false
+                heat_cool: false
+                dry: false
+                fan_only: false
+  - type: custom:mushroom-chips-card
+    style: |
+      ha-card {
+        --chip-box-shadow: none;
+        --chip-background: none;
+        border: none;
+      }
+    alignment: justify
+    chips:
+      - type: template
+        entity: climate.daikinap83672
+        content: |
+          {{ state_attr(entity, 'fan_mode') }}
+        icon: mdi:fan
+        icon_color: green
+        tap_action: none
+        style: |
+          ha-card {
+            border: none
+          }
+      - type: entity
+        entity: automation.nexus_a_c_temperature_management
+        tap_action:
+          action: call-service
+          service: automation.toggle
+          target:
+            entity_id: automation.nexus_a_c_temperature_management
+        hold_action:
+          action: more-info
+        icon_color: primary
+        style: |
+          ha-card {
+            border: none;
+            --chip-height: 33px
+          }
+      - type: weather
+        entity: weather.ajaccio
+        show_conditions: true
+        show_temperature: true
+        style: |
+          ha-card {
+            border: none
+          }
+      - type: template
+        double_tap_action:
+          action: none
+        content: '{{ states(entity) }}% Humidity'
+        entity: sensor.pure_cool_link_humidity
+        icon: mdi:water
+        icon_color: blue
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        style: |
+          ha-card {
+            border: none
+          }
+  - type: custom:simple-thermostat
+    style: |
+      ha-card {
+        --st-font-size-toggle-label: 6px
+        --st-spacing: 0px;
+        --st-default-spacing: 0px;
+        #--st-mode-background: #262626;
+        margin-left: 12px;
+        margin-right: 12px;
+        border: none
+      }
+      ha-card .mode-item.active.off { 
+        #background: #363636;
+        #color: #9e9e9e;
+      }
+      ha-card .mode-item.active.cool { 
+        background: #1d3447;
+        color: #2196f3;
+      }
+      ha-card .mode-item.active.heat { 
+        background: #472421;
+        color: #f44336;
+      }
+      ha-card .mode-item.active.heat_cool { 
+        background: #493516;
+        color: #ff9800;
+      }
+      ha-card .mode-item.active { 
+        background: #263926;
+        color: #4caf50;
+      }
+      ha-card .mode-item.active:hover { 
+        background: #363636;
+        color: #9e9e9e;
+      }
+      ha-card .mode-item:hover { 
+        background: #363636;
+        color: #9e9e9e;
+      }
+      ha-card .mode-item {
+        --st-spacing: 10px;
+        border-radius: 10px;
+      }
+      ha-card .modes {
+        grid-gap: 12px
+      }
+    entity: climate.daikinap83672
+    header: false
+    setpoints: false
+    hide:
+      temperature: true
+      state: true
+    layout:
+      mode:
+        headings: false
+        icons: true
+        names: false
+      step: row
+    control:
+      hvac:
+        'off':
+          name: Power
+        heat:
+          name: Heat
+        cool:
+          name: Cool
+        heat_cool:
+          name: Auto
+  - type: grid
+    square: false
+    columns: 3
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: sensor.daikinap83672_inside_temperature
+        primary_info: state
+        secondary_info: name
+        name: Inside
+        icon_color: green
+        style: |
+          ha-card {
+            border: none
+          }
+      - type: custom:mushroom-entity-card
+        entity: sensor.hue_outdoor_motion_sensor_temperature
+        primary_info: state
+        secondary_info: name
+        name: Outside
+        icon_color: blue
+        style: |
+          ha-card {
+            border: none
+          }
+      - type: custom:simple-thermostat
+        style: |
+          ha-card {
+            --st-font-size-toggle-label: 6px
+            --st-spacing: 0px;
+            --st-default-spacing: 1.3px;
+            --st-mode-background: #262626;
+            margin-right: 12px;
+            border: none;
+          }
+          ha-card .mode-item.active.eco { 
+            background: #263926;
+            color: #4caf50;
+          }
+          ha-card .mode-item.active.boost { 
+            background: #472421;
+            color: #f44336;
+          }
+          ha-card .mode-item.active.none { 
+            background: #1d3447;
+            color: #2196f3;
+          }
+          ha-card .mode-item.active:hover { 
+            background: #363636;
+            color: #9e9e9e;
+          }
+          ha-card .mode-item:hover { 
+            background: #363636;
+            color: #9e9e9e;
+          }
+          ha-card .mode-item {
+            --st-spacing: 6px;
+            border-radius: 10px;
+          }
+          ha-card .modes {
+            grid-gap: 12px
+          }
+        entity: climate.daikinap83672
+        header: false
+        setpoints: false
+        hide:
+          temperature: true
+          state: true
+        layout:
+          mode:
+            headings: false
+            icons: true
+            names: false
+          step: row
+        control:
+          preset:
+            none:
+              icon: mdi:circle-medium
+            eco:
+              icon: mdi:leaf
+            boost:
+              icon: mdi:rocket-launch
+            away: false
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.daikinap83672_inside_temperature
+        name: Inside Temperature
+        color: '#4caf50'
+      - entity: sensor.hue_outdoor_motion_sensor_temperature
+        name: Outside Temperature
+        color: '#2196f3'
+    hours_to_show: 24
+    line_width: 3
+    font_size: 50
+    animate: true
+    show:
+      name: false
+      icon: false
+      state: false
+      legend: false
+      points: hover
+      fill: fade
+      labels: false
+      labels_secondary: false
+    style: |
+      ha-card {
+        border: none
+      }
