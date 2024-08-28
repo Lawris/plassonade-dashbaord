@@ -46,7 +46,7 @@ If you order from here, it won't cost you anything more but I will receive a sma
 
 ## Room card
 
-![Room card](room_card/room_card.png)
+![Room card](room_card/room_card.jpg)
 
 The intention was to have a functional and minimal card to check the status of each room at a glance.
 It is also a shortcut to a more detailed view (dashboard) for each room, which is perfect for a small screen (smartphone) display.
