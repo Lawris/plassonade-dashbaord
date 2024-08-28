@@ -28,6 +28,25 @@ This dashboard's code is provided as-is. It is up to you to modify the entities'
 [Simple thermostat]: <https://github.com/nervetattoo/simple-thermostat>
 [Mini graph card]: <https://github.com/kalkih/mini-graph-card>
 
+## Room card
+
+![Room card](room_card/room_card.png)
+
+The intention was to have a functional and minimal card to check the status of each room at a glance.
+It is also a shortcut to a more detailed view (dashboard) for each room, which is perfect for a small screen (smartphone) display.
+I've designed a small card, that I duplicated for each room, and all put together in a grid component.
+Each card displays:
+- The light state of the room (if any light is on, the room logo will be lit up to the color of the lights);
+- The temperature of the specific room;
+- If presence is detected or not in that room.
+
+Controls:
+- By clicking on the room you can turn on/off the lights inside it;
+- Clicking on the arrow will redirect you to the approriate dashboard.
+
+To make this work, you just need to replace the entities for each of your rooms and copy/paste the card in the grid if you have more rooms to manage.
+Also, you need to create a dashboard for each room that you will navigate to when tapping on the arrow.
+
 
 ## Climate control and Weather card
 
