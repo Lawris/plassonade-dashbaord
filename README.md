@@ -32,7 +32,7 @@ This dashboard's code is provided as-is. It is up to you to modify the entities'
 
 I've put all the items I'm using in my Smart Home on my Amazon page.
 
-Select the appropriate marketplace:
+Select the appropriate marketplace:<br />
 [🇺🇸 Amazon USA]<br />
 [🇫🇷 Amazon France]<br />
 [🇮🇹 Amazon Italia]<br />
