@@ -28,6 +28,17 @@ This dashboard's code is provided as-is. It is up to you to modify the entities'
 [Simple thermostat]: <https://github.com/nervetattoo/simple-thermostat>
 [Mini graph card]: <https://github.com/kalkih/mini-graph-card>
 
+## Want to replicate my setup?
+
+I've put all the items I'm using in my Smart Home on my Amazon page.
+
+Select the appropriate marketplace:
+[🇺🇸 Amazon USA]: <https://amazon.com/shop/plassonade>
+[🇫🇷 Amazon France]: <https://amazon.fr/shop/plassonade>
+[🇮🇹 Amazon Italia]: <https://amazon.it/shop/plassonade>
+
+If you order from here, it won't cost you anything more but I will receive a small commission from your purchases. Thanks for your support!
+
 ## Room card
 
 ![Room card](room_card/room_card.png)
@@ -35,6 +46,7 @@ This dashboard's code is provided as-is. It is up to you to modify the entities'
 The intention was to have a functional and minimal card to check the status of each room at a glance.
 It is also a shortcut to a more detailed view (dashboard) for each room, which is perfect for a small screen (smartphone) display.
 I've designed a small card, that I duplicated for each room, and all put together in a grid component.
+
 Each card displays:
 - The light state of the room (if any light is on, the room logo will be lit up to the color of the lights);
 - The temperature of the specific room;
