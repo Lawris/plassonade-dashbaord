@@ -103,7 +103,8 @@ Work in progress...
 
 
 ## Need help?
-Contact me on Instagram [@plassonade], or by email: plassonade@gmail.com.
 
-[@plassonade]: <https://instagram.com/plassonade>
-[plassonade@gmail.com]: <mailto:plassonade@gmail.com>
+Feel free to ask your questions on our Discord community, The Smart Playground.
+[You can join it for free here].
+
+[You can join it for free here]: <https://plassonade.com/links>
