@@ -47,18 +47,17 @@ cards:
                 border: none;
               }
         alignment: end
-        style: |
-          ha-card {
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            height: 100%;
-            border: full;
-            padding-right: 14px;
-            --chip-spacing: 0px;
-            #--chip-border: none;
-            --chip-background: transparent;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              display: flex;
+              align-items: center;
+              justify-content: right;
+              height: 100%;
+              padding-right: 14px;
+              --chip-spacing: 0px;
+              --chip-background: transparent;
+            }
   - type: custom:stack-in-card
     keep:
       margin: false
@@ -108,18 +107,17 @@ cards:
                 border: none;
               }
         alignment: end
-        style: |
-          ha-card {
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            height: 100%;
-            border: full;
-            padding-right: 14px;
-            --chip-spacing: 0px;
-            #--chip-border: none;
-            --chip-background: transparent;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              display: flex;
+              align-items: center;
+              justify-content: right;
+              height: 100%;
+              padding-right: 14px;
+              --chip-spacing: 0px;
+              --chip-background: transparent;
+            }
   - type: custom:stack-in-card
     keep:
       margin: false
@@ -166,18 +164,17 @@ cards:
                 border: none;
               }
         alignment: end
-        style: |
-          ha-card {
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            height: 100%;
-            border: full;
-            padding-right: 14px;
-            --chip-spacing: 0px;
-            #--chip-border: none;
-            --chip-background: transparent;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              display: flex;
+              align-items: center;
+              justify-content: right;
+              height: 100%;
+              padding-right: 14px;
+              --chip-spacing: 0px;
+              --chip-background: transparent;
+            }
   - type: custom:stack-in-card
     keep:
       margin: false
@@ -226,16 +223,15 @@ cards:
                 border: none;
               }
         alignment: end
-        style: |
-          ha-card {
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            height: 100%;
-            border: full;
-            padding-right: 14px;
-            --chip-spacing: 0px;
-            #--chip-border: none;
-            --chip-background: transparent;
-          }
+        card_mod:
+          style: |
+            ha-card {
+              display: flex;
+              align-items: center;
+              justify-content: right;
+              height: 100%;
+              padding-right: 14px;
+              --chip-spacing: 0px;
+              --chip-background: transparent;
+            }
 columns: 2
