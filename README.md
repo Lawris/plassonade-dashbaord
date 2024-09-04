@@ -21,12 +21,14 @@ This dashboard's code is provided as-is. It is up to you to modify the entities'
 - [Stack in cards]
 - [Simple thermostat]
 - [Mini graph card]
+- [Card Mod]
 
 [HACS]: <https://hacs.xyz/>
 [Mushroom cards]: <https://github.com/piitaya/lovelace-mushroom>
 [Stack in cards]: <https://github.com/custom-cards/stack-in-card>
 [Simple thermostat]: <https://github.com/nervetattoo/simple-thermostat>
 [Mini graph card]: <https://github.com/kalkih/mini-graph-card>
+[Card  Mod]: <https://github.com/thomasloven/lovelace-card-mod>
 
 ## Want to replicate my setup?
 
