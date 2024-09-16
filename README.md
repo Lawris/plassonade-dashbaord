@@ -38,10 +38,12 @@ Select the appropriate marketplace:<br />
 [🇺🇸 Amazon USA]<br />
 [🇫🇷 Amazon France]<br />
 [🇮🇹 Amazon Italia]<br />
+[🇩🇪 Amazon Deutschland]<br />
 
 [🇺🇸 Amazon USA]: <https://amazon.com/shop/plassonade>
 [🇫🇷 Amazon France]: <https://amazon.fr/shop/plassonade>
 [🇮🇹 Amazon Italia]: <https://amazon.it/shop/plassonade>
+[🇩🇪 Amazon Deutschland]: <https://amazon.de/shop/plassonade>
 
 
 If you order from here, it won't cost you anything more but I will receive a small commission from your purchases. Thanks for your support!
