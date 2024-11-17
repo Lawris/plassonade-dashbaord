@@ -15,8 +15,11 @@ cards:
     cards:
       - type: custom:mushroom-template-card
         primary: Living Room
-        secondary: '{{states("sensor.daikinap83672_inside_temperature")}} °C'
-        icon: mdi:sofa
+        secondary: >
+          🌡️ {{
+          states("sensor.living_room_temperature_humidity_sensor_temperature") }} °C
+          💧 {{ states("sensor.living_room_temperature_humidity_sensor_humidity") }}
+          %        icon: mdi:sofa
         entity: light.living_room_lights
         icon_color: '{{ state_attr(entity, "rgb_color")}}'
         badge_icon: |
@@ -72,7 +75,11 @@ cards:
     cards:
       - type: custom:mushroom-template-card
         primary: Bedroom
-        secondary: '{{states("sensor.pure_cool_link_temperature")}} °C'
+        secondary: >
+          🌡️ {{
+          states("sensor.living_room_temperature_humidity_sensor_temperature") }} °C
+          💧 {{ states("sensor.living_room_temperature_humidity_sensor_humidity") }}
+          %
         icon: mdi:bed
         entity: light.bedroom_lights
         icon_color: '{{ state_attr(entity, "rgb_color")}}'
@@ -132,7 +139,11 @@ cards:
     cards:
       - type: custom:mushroom-template-card
         primary: Bathroom
-        secondary: '{{states("sensor.0x00158d00096ff731_temperature")}} °C'
+        secondary: >
+          🌡️ {{
+          states("sensor.living_room_temperature_humidity_sensor_temperature") }} °C
+          💧 {{ states("sensor.living_room_temperature_humidity_sensor_humidity") }}
+          %
         icon: mdi:shower-head
         entity: light.bathroom_lights
         icon_color: '{{state_attr(entity, "rgb_color")}}'
@@ -189,7 +200,11 @@ cards:
     cards:
       - type: custom:mushroom-template-card
         primary: Balcony
-        secondary: '{{states("sensor.hue_outdoor_motion_sensor_temperature")}} °C'
+        secondary: >
+          🌡️ {{
+          states("sensor.living_room_temperature_humidity_sensor_temperature") }} °C
+          💧 {{ states("sensor.living_room_temperature_humidity_sensor_humidity") }}
+          %
         icon: mdi:balcony
         entity: light.balcony_lights
         icon_color: '{{ state_attr(entity, "rgb_color")}}'
