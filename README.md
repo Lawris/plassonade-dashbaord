@@ -32,19 +32,9 @@ This dashboard's code is provided as-is. It is up to you to modify the entities'
 
 ## Want to replicate my setup?
 
-I've put all the items I'm using in my Smart Home on my Amazon page.
+You can find my Smart Home setup [by following this link].
 
-Select the appropriate marketplace:<br />
-[🇺🇸 Amazon USA]<br />
-[🇫🇷 Amazon France]<br />
-[🇮🇹 Amazon Italia]<br />
-[🇩🇪 Amazon Deutschland]<br />
-
-[🇺🇸 Amazon USA]: <https://amazon.com/shop/plassonade>
-[🇫🇷 Amazon France]: <https://amazon.fr/shop/plassonade>
-[🇮🇹 Amazon Italia]: <https://amazon.it/shop/plassonade>
-[🇩🇪 Amazon Deutschland]: <https://amazon.de/shop/plassonade>
-
+[by following this link]: <https://linktr.ee/plassonade>
 
 If you order from here, it won't cost you anything more but I will receive a small commission from your purchases. Thanks for your support!
 
