@@ -58,6 +58,47 @@ Controls:
 To make this work, you just need to replace the entities for each of your rooms and copy/paste the card in the grid if you have more rooms to manage.
 Also, you need to create a dashboard for each room that you will navigate to when tapping on the arrow.
 
+### Adding radiator glow animation
+
+![Radiator glow](room_card/radiator_glow.gif)
+
+You can create a radiator (or even A/C) glow to the room card by just adding a conditional animation.
+The additional code needs to be at the root of each room card (stack-in-card), under the `card_mod` style, like this:
+```
+...
+    card_mod:
+      style: |
+        ha-card {
+          border: none;
+
+          /* Add your thermostat entity like below with your desired condition */
+          {% if state_attr('climate.better_thermostat', 'hvac_action') == 'heating' %}
+          animation: breathing-shadow 1.5s infinite alternate ease-in-out;
+          {% else %}
+          animation: none;
+          {% endif %}
+        }
+        /* Breathing/glow animation */
+        /* Feel free to change the color and intensity to your liking */
+        @keyframes breathing-shadow {
+          0% {
+            box-shadow: 0px 0px 10px 1px #FF8C00;
+          }
+          100% {
+            box-shadow: 0px 0px 13px 3px #FF8C00;
+          }
+        }
+    cards:
+      - type: custom:mushroom-template-card
+        primary: Living Room
+...
+```
+Replace the thermostat name with yours, but you can definitively use something else (like a switch for example) if you don't have a thermostat entity.
+
+By the way, I highly suggest you to use the [Better Thermostat] integration to have your radiators and A/C fully automatized, [here is a video I made about it].
+
+[Better Thermostat]: <https://github.com/KartoffelToby/better_thermostat>
+[here is a video I made about it]: <https://www.instagram.com/plassonade/reel/DDQCu4EAaN7/>
 
 ## Climate control and Weather card
 
